@@ -55,6 +55,10 @@ p {
     color: #fff;
 }
 
+.navbar-items a:hover {
+    color: #70747a;
+}
+
 
 .default-btn {
     padding: 15px 20px;
