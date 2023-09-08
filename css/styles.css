@@ -64,11 +64,13 @@ p {
     padding: 15px 20px;
     background-color: #2cc76a;
     border-radius: 5px;
+    margin-right: 5px;
 }
 
 .navbar-items .default-btn:hover {
     background-color: #22bb5f;
     color: #fff;
+    margin-right: 20px;
 }
 
 
