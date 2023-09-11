@@ -16,11 +16,45 @@ p {
 
 /* NAVBAR */
 
+/* Estilos para o botão hamburguer */
+.hamburger-button {
+    display: none; /* Oculta o botão por padrão em telas maiores */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #00B894;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
 .navbar-container {
     width: 100%;
     height: 100px;
     background-color: #0D1137;
-    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-items li {
+    margin-left: 25px;
+}
+
+.navbar-items a {
+    color: #00B894;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #fff;
 }
 
 .nav {
@@ -31,28 +65,6 @@ p {
     width: 200px;
     height: 75px;
     margin-top: 10px;
-}
-
-.navbar-items {
-    position: absolute;
-    right: 0;
-    height: 100px;
-    line-height: 100px;
-    margin: 0;
-    display: inline-block;
-}
-
-.navbar-items li {
-    display: inline-block;
-    text-transform: uppercase;
-    margin-left: 25px;
-}
-
-.navbar-items a {
-    color: #00B894;
-    text-decoration: none;
-    transition: 0.5s;
-    color: #fff;
 }
 
 .navbar-items a:hover {
@@ -77,7 +89,7 @@ p {
 /* main banner */
 
 .main-banner {
-    background-image: url('Climafrio-Solutions/img/mainbanner.jpg');
+    background-image: url('/img/mainbanner.jpg');
     background-size: cover;
     background-position: center;
     padding: 10rem 0;
@@ -103,6 +115,7 @@ p {
 
 .services-container {
     padding: 5rem 0;
+    background-color: #f5f9ed;
 }
 
 .services-container ul {
@@ -142,7 +155,9 @@ p {
 }
 
 /* PLANOS E PREÇOS */
+
 .pricing-container {
+    padding-top: 3rem;
     padding-bottom: 5rem;
     text-align: center;
 }
@@ -313,4 +328,110 @@ footer {
 .copyright {
     margin-top: 20px;
     font-size: 14px;
+}
+
+
+/* RESPONSIVIDADE */
+
+/* small laptops a partir de 100px */
+
+@media screen and (max-width: 1100px) {
+    .plans-container {
+        width: 95%;
+    }
+
+    .plan {
+        margin: 0 5px;
+    }
+}
+
+/* tablets */
+
+@media screen and (max-width: 900px){
+    .main-banner p {
+        padding: 0 6rem;
+    }
+
+    .searchdomain-container {
+        padding: 2rem 4rem;
+    }
+}
+
+/* celular 576px */
+
+@media screen and (max-width:576px) {
+    
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .main-banner p {
+        padding: 0 2rem;
+    }
+
+    .services-container ul {
+        flex-direction: column;
+    }
+
+    .plans-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .plan {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .contact-container {
+        padding: 3rem 2rem;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer-social a {
+        margin: 5px;
+    }
+
+    .footer-container {
+        padding-left: 10px;
+    }
+
+    .footer-container h3 {
+        font-size: 20px;
+    }
+
+     /* Exibe o botão hamburguer em telas pequenas */
+    .hamburger-button {
+        display: block;
+    }
+
+    /* Oculta a lista de itens do menu em telas pequenas */
+    .navbar-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px; /* Define a posição do menu hamburguer em relação à barra de navegação */
+        right: 0;
+        background-color: #0D1137;
+        width: 200px;
+        padding: 10px;
+        text-align: right;
+    }
+
+    /* Estilos para os itens do menu hamburguer */
+    .navbar-items li {
+        margin: 10px 0;
+    }
+
+    /* Exibe a lista de itens do menu quando o botão hamburguer é clicado */
+    .navbar-items.active {
+        display: flex;
+    }
 }
