@@ -333,7 +333,20 @@ footer {
 
 /* RESPONSIVIDADE */
 
-/* small laptops a partir de 100px */
+/* desktop grande até 1440px */
+
+@media screen and (max-width: 1440px) {
+    .plan ul {
+        padding: 0 3rem;
+        width: 300px;
+    }
+
+    .plan {
+        margin: 0;
+    }
+}
+
+/* small laptops a partir de 1024px */
 
 @media screen and (max-width: 1100px) {
     .plans-container {
@@ -342,6 +355,10 @@ footer {
 
     .plan {
         margin: 0 5px;
+    }
+
+    .main-banner p {
+        padding: 1rem 3rem 0;
     }
 }
 
