@@ -89,7 +89,7 @@ p {
 /* main banner */
 
 .main-banner {
-    background-image: url('/img/mainbanner.jpg');
+    background-image: url('img/mainbanner.jpg');
     background-size: cover;
     background-position: center;
     padding: 10rem 0;
