@@ -146,6 +146,16 @@ p {
     color: #f34;
 }
 
+.fa-gears:hover {
+    color: #0909b6;
+}
+.fa-bed:hover {
+    color: #0ad7ae;
+}
+.fa-wrench:hover {
+    color: rgb(241, 78, 92);
+}
+
 .services-container h3 {
     margin-bottom: 25px;
 }
